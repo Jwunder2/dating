@@ -1,4 +1,4 @@
-ul li{
+#text ul li{
     font-style:italic;
     list-style-type: none;
     padding:5px;
@@ -11,3 +11,83 @@ ul li{
 #main p{
     font-size:24px;
 }
+
+#form {
+    border-width:2px;
+    border-style:solid;
+    padding:20px;
+}
+
+.privacyPolicy
+{
+    color: blue;
+    background:none;
+}
+
+#form p
+{
+    border-width:1px;
+    border-style:solid;
+    background:gray;
+}
+
+input[type="radio"]{
+    margin: 0 10px 0 10px;
+}
+
+
+input[type="checkbox"] {
+    margin-right:5px;
+}
+
+.checkbox {
+    column-count: 4;
+}
+
+.mainCheck  ul li{
+    list-style-type: none;
+    padding:5px;
+}
+
+#personalInfo
+{
+    padding:10px;
+}
+
+
+#personalInfo button
+{
+    padding:10px;
+}
+
+#info ul
+{
+    border-width:1px;
+    border-style:solid;
+    list-style-type: none;
+    padding:0;
+}
+
+#info ul li {
+    padding:16px 24px;
+    border-bottom:1px solid;
+    font-size:24px;
+}
+
+#info ul li:last-child
+{
+    border-bottom:none;
+}
+
+#bio img, #bio p
+{
+    width:100%;
+    text-align: center;
+}
+
+#bio div
+{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
