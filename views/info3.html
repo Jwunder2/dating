@@ -27,30 +27,41 @@
     <h1>Interests</h1>
     <div class="mainCheck">
     <form action="#" method="post" class="form-horizontal" id="form">
+        <div>
         <h2>Indoor-Interests</h2>
 
-            <ul class="checkbox">
-                <li class="checkbox-inline"><input  type="checkbox" value="TV" id="tv" name="interests[]" />Television</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Movies" id="movies" name="interests[]" />Movies</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Cooking" id="cooking" name="interests[]" />Cooking</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Board Games" id="board games" name="interests[]" />Board Games</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Puzzles" id="puzzles" name="interests[]" />Puzzles</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Reading" id="reading" name="interests[]" />Reading</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Playing Cards" id="playing cards" name="interests[]" />Playing Cards</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Video Games" id="video games" name="interests[]" />Video Games</li>
-            </ul>
+        <repeat group="{{ @Indoor }}" value="{{ @Indoor }}">
+            <label><input type="checkbox" name="Indoors[]"
+                          id="{{ @Indoor }}" value="{{ @Indoor }}"  <check if="{{ in_array(@Indoors, @userChoices) }}">
+                checked="checked"
+            </check>
+                >
+                {{ @Indoor }}
+                </input>
+            </label><br>
+        </repeat>
+            </div>
+            <check if="{{ isset(@errors['Indoors']) }}">
+                <span class="err">{{ @errors['Indoors'] }}</span>
+            </check>
 
 
+        <div>
         <h2>Outdoor-Interests</h2>
-            <ul class="checkbox">
-                <li class="checkbox-inline"><input  type="checkbox" value="Hiking" id="hiking" name="interests[]" />Hiking</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Biking" id="biking" name="interests[]" />Biking</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Swimming" id="swimming" name="interests[]" />Swimming</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Collecting" id="collecting" name="interests[]" />Collecting</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Walking" id="walking" name="interests[]" />Walking</li>
-                <li class="checkbox-inline"><input  type="checkbox" value="Climbing" id="climbing" name="interests[]" />Climbing</li>
-            </ul>
-        <br>
+        <repeat group="{{ @Outdoor }}" value="{{ @Outdoor }}">
+            <label><input type="checkbox" name="Outdoors[]"
+                          id="{{ @Outdoor }}" value="{{ @Outdoor }}"  <check if="{{ in_array(@Outdoors, @userChoices) }}">
+                checked="checked"
+            </check>
+                >
+                {{ @Outdoor }}
+                </input>
+            </label><br>
+        </repeat>
+            <check if="{{ isset(@errors['Indoors']) }}">
+                <span class="err">{{ @errors['Indoors'] }}</span>
+            </check>
+        </div>
 
         <div class="d-flex flex-row-reverse">
             <button type="submit" class="btn btn-primary" >Next</button>
