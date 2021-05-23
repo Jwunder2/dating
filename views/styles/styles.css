@@ -1,0 +1,13 @@
+ul li{
+    font-style:italic;
+    list-style-type: none;
+    padding:5px;
+}
+
+#main{
+    padding-top: 15px;
+}
+
+#main p{
+    font-size:24px;
+}
