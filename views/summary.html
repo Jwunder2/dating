@@ -21,14 +21,15 @@
     <div class="row no-gutters">
         <div class="col-6" id="info">
             <ul>
-                <li>Name: {{ @SESSION.fname }} </li>
-                <li>Gender: {{ @SESSION.gender }}</li>
-                <li>Age: {{ @SESSION.age }}</li>
-                <li>Phone: {{ @SESSION.phoneNumber }}</li>
-                <li>State: {{ @SESSION.state }}</li>
-                <li>Seeking: {{ @SESSION.seeking }}</li>
-                <li>Indoor Interests: {{ @SESSION.Indoors }}</li>
-                <li>Outdoor Interests: {{ @SESSION.Outdoors }}</li>
+                <li>Name: {{ @SESSION.dating->getFname() }} {{ @SESSION.dating->getLname() }}</li>
+                <li>Gender: {{ @SESSION.dating->getGender() }}</li>
+                <li>Age: {{ @SESSION.dating->getAge() }}</li>
+                <li>Phone: {{ @SESSION.dating->getPhone() }}</li>
+                <li>State: {{ @SESSION.dating->getState() }}</li>
+                <li>Seeking: {{ @SESSION.dating->getSeeking() }}</li>
+                <li>Indoor Interests: {{ @SESSION.datingPrem->getInDoorInterests() }}</li>
+                <li>Outdoor Interests: {{ @SESSION.datingPrem->getOutDoorInterests() }}</li>
+
             </ul>
         </div>
 
