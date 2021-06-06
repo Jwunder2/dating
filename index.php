@@ -27,13 +27,11 @@ $f3->route('GET /', function() {
 $f3->route('GET|POST /info1', function()
 {
     $GLOBALS['con']->info1();
-    var_dump($_SESSION);
 });
 
 $f3->route('GET|POST /info2', function()
 {
     $GLOBALS['con']->info2();
-    var_dump($_SESSION);
 });
 
 $f3->route('GET|POST /info3', function()

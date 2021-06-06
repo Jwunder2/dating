@@ -185,7 +185,7 @@ class Controller
 
     function summary()
     {
-        var_dump($_SESSION);
+
         //Display the summary
         $view = new Template();
         echo $view->render('views/summary.html');
